@@ -1,15 +1,17 @@
-# canvas-application
+# 注意事项
 
-To install dependencies:
+- 我后端使用的是 Bun 作为运行环境，前端使用 Vite 作为构建工具。
+- 前端调用后端 API 时，请使用 @elysiajs/eden 库，它封装了 API 调用，简化了前后端交互。
+- 后端服务使用了 drrizle orm 进行数据库操作，确保数据库连接和查询的高效性。
+- Typescript 是本项目的主要编程语言，确保代码的类型安全和可维护性，不允许存在任何类型错误漏洞和 any。
+- 确保代码质量，遵循最佳实践和代码规范，保持代码整洁和易读。
+- 项目结构清晰，前后端代码分离，便于维护和扩展。
+- 请确保在提交代码前进行充分的测试，确保功能正常运行且无错误。
+- 当前项目仅支持用户本地运行。
 
-```bash
-bun install
-```
+# 项目说明
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.3. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+- 项目的流程是这样的：
+  1. 用户在前端界面通过谷歌插件进行操作，右键添加当前网址触发 API 请求。
+  2. 后端接收请求后解析网址获得元数据，使用 drrizle orm 将元数据存储到 SQLite 数据库中。
+  3. 解析的元数据包括标题、描述、图片、favicon等信息，会被包装成节点并制作成 JSON 保存在数据库中 `canvas.nodes` 。
