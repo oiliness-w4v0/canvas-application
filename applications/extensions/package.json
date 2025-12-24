@@ -1,0 +1,13 @@
+{
+  "name": "@application/extensions",
+  "private": true,
+  "scripts": {
+    "dev": "bun run ./build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
